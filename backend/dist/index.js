@@ -9,6 +9,7 @@ const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+const db = require("./db/index");
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
