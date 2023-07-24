@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("../db/index");
+const { Schema } = mongoose;
 const userSchema = mongoose.Schema({
     name: {
         type: String,

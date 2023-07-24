@@ -1,5 +1,6 @@
 export {};
 const mongoose = require("../db/index");
+const { Schema } = mongoose;
 
 const userSchema = mongoose.Schema(
   {

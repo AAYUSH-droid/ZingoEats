@@ -7,9 +7,14 @@ require("dotenv").config();
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 const port = process.env.PORT;
+const db = require("./db/index");
+//importing routers
+const productRouter_1 = __importDefault(require("./routes/productRouter"));
+const userRouter_1 = __importDefault(require("./routes/userRouter"));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
-const db = require("./db/index");
+app.use("/api/", productRouter_1.default);
+app.use("/api/", userRouter_1.default);
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });

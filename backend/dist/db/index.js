@@ -17,4 +17,5 @@ const db = mongoose_1.default.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 module.exports = db;
 // module.exports = mongoose;
-exports.default = mongoose_1.default;
+// export default mongoose;
+module.exports = mongoose_1.default;
