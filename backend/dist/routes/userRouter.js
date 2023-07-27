@@ -21,5 +21,4 @@ router.post("/create-user", (req, res) => {
         }
     });
 });
-// module.exports = router;
 exports.default = router;

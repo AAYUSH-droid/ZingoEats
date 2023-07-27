@@ -1,8 +1,6 @@
-// const mongoose = require("../db/index");
-// import mongoose from "../db/index";
 const mongoose = require("../db/index");
 const Schema = mongoose.Schema;
-// const ObjectId = Schema.ObjectId;
+const ObjectId = Schema.ObjectId;
 
 const CategorySchema = new Schema({
   name: String,
