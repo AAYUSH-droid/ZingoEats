@@ -4,8 +4,7 @@ const MongoClient = require("mongodb").MongoClient;
 var _ = require("lodash");
 
 async function main() {
-  const uri =
-    "mongodb+srv://aayush:hello@cluster0.zcrrttf.mongodb.net/FOOD-ORDER-APP?retryWrites=true&w=majority";
+  const uri = process.env.MONGO_URL;
   const client = new MongoClient(uri);
 
   try {
