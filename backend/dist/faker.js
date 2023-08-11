@@ -14,7 +14,7 @@ const MongoClient = require("mongodb").MongoClient;
 var _ = require("lodash");
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        const uri = "mongodb+srv://aayush:hello@cluster0.zcrrttf.mongodb.net/FOOD-ORDER-APP?retryWrites=true&w=majority";
+        const uri = process.env.MONGO_URL;
         const client = new MongoClient(uri);
         try {
             yield client.connect();
